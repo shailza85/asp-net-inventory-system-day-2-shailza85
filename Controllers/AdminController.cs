@@ -119,20 +119,20 @@ namespace InventorySystem.Controllers
 
             if (string.IsNullOrWhiteSpace(amount))
             {
-                throw new ArgumentNullException(nameof(amount), "Product amount was not provided.");
+                throw new ArgumentNullException(nameof(amount), "Product amount/quantity was not provided.");
             }
             else
             {
                 id = id.Trim();
                 if (!int.TryParse(amount, out amountParsed))
                 {
-                    throw new ArgumentException("Product amount was not a valid integer.", nameof(amount));
+                    throw new ArgumentException("Product amount/quantity was not a valid integer.", nameof(amount));
                 }
                 else
                 {
                     if (amountParsed < 0)
                     {
-                        throw new ArgumentException("Product amount cannot be less than zero.", nameof(amount));
+                        throw new ArgumentException("Product amount/quantity cannot be less than zero.", nameof(amount));
                     }
                 }
             }
@@ -175,20 +175,20 @@ namespace InventorySystem.Controllers
 
             if (string.IsNullOrWhiteSpace(amount))
             {
-                throw new ArgumentNullException(nameof(amount), "Product amount was not provided.");
+                throw new ArgumentNullException(nameof(amount), "Product amount/quantity was not provided.");
             }
             else
             {
                 id = id.Trim();
                 if (!int.TryParse(amount, out amountParsed))
                 {
-                    throw new ArgumentException("Product amount was not a valid integer.", nameof(amount));
+                    throw new ArgumentException("Product amount/quantity was not a valid integer.", nameof(amount));
                 }
                 else
                 {
                     if (amountParsed < 0)
                     {
-                        throw new ArgumentException("Product amount cannot be less than zero.", nameof(amount));
+                        throw new ArgumentException("Product amount/quantity cannot be less than zero.", nameof(amount));
                     }
                 }
             }

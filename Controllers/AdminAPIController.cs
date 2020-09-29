@@ -24,9 +24,13 @@ namespace InventorySystem.Controllers
                 // Encode our created object as JSON and bounce it back with the request.
                 response = Ok(created);
             }
+            catch (InvalidOperationException)
+            {
+                response = StatusCode(403, new { error = $"Please provide a product name to add." });
+            }
             catch (Exception e)
             {
-                response = UnprocessableEntity(new { error = e.Message });
+                response = StatusCode(403, new { error = e.Message }); ;
             }
 
             // Return the response.
