@@ -12,3 +12,24 @@ code {
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
+
+body {
+    background-color: aliceblue;
+}
+
+.navbar-brand
+{
+    font-size:small;
+    font-weight:bold;
+    color:firebrick !important;
+}
+p{
+    color:chocolate;
+    font-weight:bold;
+    font-size:medium;
+}
+form {
+    line-height: 35px;
+    font-size: larger;
+    font-weight: bold;
+}
